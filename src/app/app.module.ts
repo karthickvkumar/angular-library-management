@@ -10,15 +10,15 @@ import { HeaderComponent } from './core-components/header/header.component';
 import { FooterComponent } from './core-components/footer/footer.component';
 import { SettingsModule } from './feature-modules/settings/settings.module';
 
-// import { LoginModule } from './feature-modules/login/login.module';
-// import { LibraryModule } from './feature-modules/library/library.module';
-// import { ReportModule } from './feature-modules/report/report.module';
+import { CustomPreloadingStrategy } from './custom-preloading.service';
+import { PageNotFoundComponent } from './core-components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -26,11 +26,8 @@ import { SettingsModule } from './feature-modules/settings/settings.module';
     SharedModule,
     BrowserAnimationsModule,
     SettingsModule
-    // LoginModule,
-    // LibraryModule,
-    // ReportModule,
   ],
-  providers: [],
+  providers: [CustomPreloadingStrategy],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
