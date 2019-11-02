@@ -10,17 +10,27 @@ import { Router } from '@angular/router';
 })
 export class LoginPageComponent implements OnInit {
 
-  constructor(private router : Router) { }
+  message = "Welcome to Login Page";
+  messageColor = "brown";
+  userInfo = {
+    email: '',
+    password: ''
+  }
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
-  onRegister(){
-  	this.router.navigateByUrl('app/signup');
+  onRegister() {
+    this.router.navigateByUrl('app/signup');
   }
 
-  onLogin(){
-  	this.router.navigateByUrl('library/add');
+  onLogin() {
+    localStorage.setItem('mode', 'admin');
+    localStorage.setItem('mode', 'user');
+    sessionStorage.setItem('type', 'user');
+    this.router.navigateByUrl('library');
   }
 
 }

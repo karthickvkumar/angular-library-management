@@ -1,7 +1,7 @@
 <mat-grid-list cols="2" rowHeight="2:1">
 	<mat-grid-tile>
 		<div>
-			<h4>Login Page</h4>
+			<h4 [style.background-color]="messageColor">{{message}}</h4>
 			<br>
 			<label>Enter Email: </label>
 			<br>
@@ -9,7 +9,7 @@
 			<br>
 			<label>Enter Password: </label>
 			<br>
-			<input type="email">
+			<input type="password">
 			<br>
 			<div style="margin-top: 10%">
 				<button mat-button (click)="onLogin()">Login</button>
