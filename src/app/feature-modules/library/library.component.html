@@ -1,0 +1,9 @@
+<div class="sidenav">
+    <a [routerLink]="['/library/list']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">List
+        Books</a>
+    <a [routerLink]="['/library/add']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">Add
+        Books</a>
+    <a [routerLink]="['/library/view']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">View
+        Books</a>
+</div>
+<router-outlet></router-outlet>

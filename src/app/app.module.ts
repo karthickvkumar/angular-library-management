@@ -12,13 +12,17 @@ import { SettingsModule } from './feature-modules/settings/settings.module';
 
 import { CustomPreloadingStrategy } from './custom-preloading.service';
 import { PageNotFoundComponent } from './core-components/page-not-found/page-not-found.component';
+import { NoAccessComponent } from './core-components/no-access/no-access.component';
+import { ReversePipe } from './core-pipes/reverse.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    NoAccessComponent,
+    ReversePipe
   ],
   imports: [
     BrowserModule,

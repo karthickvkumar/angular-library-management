@@ -9,12 +9,13 @@ import { LibraryRoutingModule } from './library-routing.module';
 import { ListComponent } from './list/list.component';
 import { AddComponent } from './add/add.component';
 import { ViewComponent } from './view/view.component';
+import { LibraryComponent } from './library.component';
 
 
 @NgModule({
-  declarations: [ListComponent, AddComponent, ViewComponent],
+  declarations: [ListComponent, AddComponent, ViewComponent, LibraryComponent],
   imports: [
-  	SharedModule,
+    SharedModule,
     LibraryRoutingModule
   ]
 })

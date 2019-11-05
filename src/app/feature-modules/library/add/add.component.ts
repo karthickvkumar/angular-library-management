@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddComponent implements OnInit {
 
+  unsavedChanges: boolean = true;
+  isloading: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onLoad() {
+
   }
 
 }

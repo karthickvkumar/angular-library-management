@@ -11,7 +11,9 @@ import { Router } from '@angular/router';
 export class LoginPageComponent implements OnInit {
 
   message = "Welcome to Login Page";
-  messageColor = "brown";
+  messageColor = "white";
+  salary = 200;
+  // birthday = '12/17/1993';
   userInfo = {
     email: '',
     password: ''
@@ -28,8 +30,8 @@ export class LoginPageComponent implements OnInit {
 
   onLogin() {
     localStorage.setItem('mode', 'admin');
-    localStorage.setItem('mode', 'user');
-    sessionStorage.setItem('type', 'user');
+    //localStorage.setItem('mode', 'user');
+    sessionStorage.setItem('type', 'admin');
     this.router.navigateByUrl('library');
   }
 

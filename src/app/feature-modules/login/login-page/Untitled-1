@@ -1,0 +1,10 @@
+Pipes:
+ - Transform data before display
+ - Built in pipes include lowercase, uppercase, decimal, date, 
+    percentage, currency etc
+ - To apply a pipe on a interpolation property use the 
+    pipe character | 
+ - We can also chain pipe using colon : and also pass parameter
+   <h1> {{employee.dob | date: 'fullDate'}} </h1>
+   <h1> {{employee.salary | currency: 'USD':true }} </h1>
+ - We can also create custom pipes

@@ -1,7 +1,9 @@
 <mat-grid-list cols="2" rowHeight="2:1">
 	<mat-grid-tile>
 		<div>
-			<h4 [style.background-color]="messageColor">{{message}}</h4>
+			<h4 [style.background-color]="messageColor">{{message | uppercase}}</h4>
+			<!-- <h4>{{salary | currency : 'USD':true}}</h4>
+			<h4>{{  birthday | date:'fullDate' | uppercase}}</h4> -->
 			<br>
 			<label>Enter Email: </label>
 			<br>
