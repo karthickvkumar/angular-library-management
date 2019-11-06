@@ -13,7 +13,8 @@ import { SettingsModule } from './feature-modules/settings/settings.module';
 import { CustomPreloadingStrategy } from './custom-preloading.service';
 import { PageNotFoundComponent } from './core-components/page-not-found/page-not-found.component';
 import { NoAccessComponent } from './core-components/no-access/no-access.component';
-import { ReversePipe } from './core-pipes/reverse.pipe';
+// import { ReversePipe } from './core-pipes/reverse.pipe';
+import { SquarePipe } from './core-pipes/square.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ReversePipe } from './core-pipes/reverse.pipe';
     FooterComponent,
     PageNotFoundComponent,
     NoAccessComponent,
-    ReversePipe
+    //ReversePipe,
+    SquarePipe
   ],
   imports: [
     BrowserModule,

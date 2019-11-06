@@ -10,14 +10,17 @@ import { Router } from '@angular/router';
 })
 export class LoginPageComponent implements OnInit {
 
-  message = "Welcome to Login Page";
+  message = "welcome to login page";
   messageColor = "white";
   salary = 200;
-  // birthday = '12/17/1993';
+  birthday = '12/17/1993'; //MM/DD/YYYY
   userInfo = {
-    email: '',
-    password: ''
+    userEmail: '',
+    userPassword: ''
   }
+
+  userEmail = ""
+  userPassword = ''
 
   constructor(private router: Router) { }
 
@@ -29,6 +32,11 @@ export class LoginPageComponent implements OnInit {
   }
 
   onLogin() {
+    let response = {
+      email: this.userEmail,
+      password: this.userPassword
+    }
+
     localStorage.setItem('mode', 'admin');
     //localStorage.setItem('mode', 'user');
     sessionStorage.setItem('type', 'admin');
