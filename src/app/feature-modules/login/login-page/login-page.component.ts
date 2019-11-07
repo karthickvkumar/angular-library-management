@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 import { Router } from '@angular/router';
 
@@ -21,14 +22,23 @@ export class LoginPageComponent implements OnInit {
 
   userEmail = ""
   userPassword = ''
+  loginForm: any;
 
   constructor(private router: Router) { }
 
   ngOnInit() {
+    this.loginForm = new FormGroup({
+      'email-info': new FormControl(""),
+      'password': new FormControl("")
+    });
   }
 
   onRegister() {
     this.router.navigateByUrl('app/signup');
+  }
+
+  onSubmit(data) {
+    console.info(data.value)
   }
 
   onLogin() {

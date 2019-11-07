@@ -10,7 +10,6 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { SignupPageComponent } from './signup-page/signup-page.component';
 import { ReversePipe } from '../../core-pipes/reverse.pipe';
 
-
 @NgModule({
   declarations: [LoginPageComponent, SignupPageComponent, ReversePipe],
   imports: [

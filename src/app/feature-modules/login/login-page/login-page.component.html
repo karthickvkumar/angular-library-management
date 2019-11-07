@@ -1,6 +1,25 @@
 <mat-grid-list cols="2" rowHeight="2:1">
 	<mat-grid-tile>
-		<div>
+		<!-- Template Driven Form -->
+		<!-- <form #userlogin="ngForm" (ngSubmit)="onSubmit(userlogin)">
+			<input type="text" name="email-user" placeholder="Enter email" ngModel>
+			<br />
+			<input type="password" name="password" placeholder="Enter password" ngModel>
+			<br />
+			<input type="submit" value="Log In">
+		</form> -->
+
+		<!-- Reactive Form -->
+		<form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)">
+			<input type="text" placeholder="Enter email" formControlName="email-info">
+			<br />
+			<input type="password" placeholder="Enter password" formControlName="password">
+			<br />
+			<input type="submit" class="forsubmit" value="Log In">
+		</form>
+
+		<!-- Normal Form -->
+		<!-- <div>
 			<label>Enter Email: </label>
 			<br>
 			<input type="email" [(ngModel)]="userInfo.userEmail">
@@ -9,12 +28,10 @@
 			<br>
 			<input type="password" [(ngModel)]="userInfo.userPassword">
 			<br>
-			<span>{{userInfo.userEmail}}</span><br>
-			<span>{{userInfo.userPassword}}</span>
 			<div style="margin-top: 10%">
 				<button (click)="onLogin()">Login</button>
 				<button (click)="onRegister()">Resigster</button>
 			</div>
-		</div>
+		</div> -->
 	</mat-grid-tile>
 </mat-grid-list>
